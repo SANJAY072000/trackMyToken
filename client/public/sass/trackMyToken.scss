@@ -98,6 +98,30 @@ header{
         @include idbt3Hover();
       }
   }
+  section{
+    background-color: #f4f4f4;
+    h3{
+      @include section-h3();
+      .bf{
+        color: #568701;
+      }
+    }
+    .card{
+      .fa{
+        @include section-card-fa();
+      }
+      .card-title{
+        @include section-card-title();
+      }
+    }
+  }
+  aside{
+    width: 100%;
+    height: 625px;
+    background: url(../images/welcome.jpg)
+    no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 

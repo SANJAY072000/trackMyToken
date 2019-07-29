@@ -33,7 +33,7 @@
 }
 @mixin header(){
   width: 100%;
-  height: 500px;
+  height: 625px;
   background: url("../images/banner.jpg")
   no-repeat center center fixed;
   background-size: cover;
@@ -83,4 +83,17 @@
   background-color:#fff;
   font-weight: bolder;
   font-family: 'Catamaran', sans-serif;
+}
+@mixin section-h3(){
+  font-weight: bolder;
+  font-size: 2.3em;
+  font-family: 'Catamaran', sans-serif;
+}
+@mixin section-card-fa(){
+  font-size: 5em;
+  color: #568701;
+}
+@mixin section-card-title(){
+  font-size: 1.5em;
+  font-family: 'Noto Sans KR', sans-serif;
 }

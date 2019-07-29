@@ -30,7 +30,7 @@ body .navbar .nav-item .fa-lightbulb-o {
   font-size: 1.4em; }
 body header {
   width: 100%;
-  height: 500px;
+  height: 625px;
   background: url("../images/banner.jpg") no-repeat center center fixed;
   background-size: cover; }
   body header .bng1 {
@@ -64,6 +64,25 @@ body header {
     background-color: #fff;
     font-weight: bolder;
     font-family: 'Catamaran', sans-serif; }
+body section {
+  background-color: #f4f4f4; }
+  body section h3 {
+    font-weight: bolder;
+    font-size: 2.3em;
+    font-family: 'Catamaran', sans-serif; }
+    body section h3 .bf {
+      color: #568701; }
+  body section .card .fa {
+    font-size: 5em;
+    color: #568701; }
+  body section .card .card-title {
+    font-size: 1.5em;
+    font-family: 'Noto Sans KR', sans-serif; }
+body aside {
+  width: 100%;
+  height: 625px;
+  background: url(../images/welcome.jpg) no-repeat center center fixed;
+  background-size: cover; }
 
 @media (min-width: 992px) {
   body .navbar .navbar-brand .bdic {
@@ -98,7 +117,7 @@ body header {
     font-size: 1.4em; }
   body header {
     width: 100%;
-    height: 500px;
+    height: 625px;
     background: url("../images/banner.jpg") no-repeat center center fixed;
     background-size: cover; }
     body header .bng1 {
@@ -141,7 +160,7 @@ body header {
     font-size: 1.4em; }
   body header {
     width: 100%;
-    height: 500px;
+    height: 625px;
     background: url("../images/banner.jpg") no-repeat center center fixed;
     background-size: cover; }
     body header .bng1 {
