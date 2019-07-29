@@ -33,7 +33,7 @@
 }
 @mixin header(){
   width: 100%;
-  height: 625px;
+  height: 725px;
   background: url("../images/banner.jpg")
   no-repeat center center fixed;
   background-size: cover;
@@ -96,4 +96,11 @@
 @mixin section-card-title(){
   font-size: 1.5em;
   font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin aside(){
+  width: 100%;
+  height: 700px;
+  background: url(../images/welcome.jpg)
+  no-repeat center center fixed;
+  background-size: cover;
 }

@@ -28,37 +28,37 @@ body .navbar .nav-item .idbt:hover {
   font-family: 'Tinos', serif; }
 body .navbar .nav-item .fa-lightbulb-o {
   font-size: 1.4em; }
-body header {
+body header, body aside {
   width: 100%;
-  height: 625px;
+  height: 725px;
   background: url("../images/banner.jpg") no-repeat center center fixed;
   background-size: cover; }
-  body header .bng1 {
+  body header .bng1, body aside .bng1 {
     font-size: 1.8em;
     font-family: 'Catamaran', sans-serif; }
-  body header .bng2 {
+  body header .bng2, body aside .bng2 {
     font-size: 2.5em;
     font-family: 'Tinos', serif;
     color: #218F76; }
-  body header .idbt2 {
+  body header .idbt2, body aside .idbt2 {
     border: 2px solid #fff;
     color: #fff;
     background-color: #c22026;
     font-weight: bolder;
     font-family: 'Catamaran', sans-serif; }
-  body header .idbt2:hover {
+  body header .idbt2:hover, body aside .idbt2:hover {
     border: 2px solid #c22026;
     color: #c22026;
     background-color: #fff;
     font-weight: bolder;
     font-family: 'Catamaran', sans-serif; }
-  body header .idbt3 {
+  body header .idbt3, body aside .idbt3 {
     border: 2px solid #fff;
     color: #fff;
     background-color: black;
     font-weight: bolder;
     font-family: 'Catamaran', sans-serif; }
-  body header .idbt3:hover {
+  body header .idbt3:hover, body aside .idbt3:hover {
     border: 2px solid black;
     color: black;
     background-color: #fff;
@@ -80,9 +80,13 @@ body section {
     font-family: 'Noto Sans KR', sans-serif; }
 body aside {
   width: 100%;
-  height: 625px;
+  height: 700px;
   background: url(../images/welcome.jpg) no-repeat center center fixed;
   background-size: cover; }
+body footer {
+  background-color: #3C40C6; }
+  body footer h1 {
+    font-family: 'Open Sans Condensed', sans-serif; }
 
 @media (min-width: 992px) {
   body .navbar .navbar-brand .bdic {
@@ -117,7 +121,7 @@ body aside {
     font-size: 1.4em; }
   body header {
     width: 100%;
-    height: 625px;
+    height: 725px;
     background: url("../images/banner.jpg") no-repeat center center fixed;
     background-size: cover; }
     body header .bng1 {
@@ -160,7 +164,7 @@ body aside {
     font-size: 1.4em; }
   body header {
     width: 100%;
-    height: 625px;
+    height: 725px;
     background: url("../images/banner.jpg") no-repeat center center fixed;
     background-size: cover; }
     body header .bng1 {
