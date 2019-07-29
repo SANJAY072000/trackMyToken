@@ -27,7 +27,8 @@ body .navbar .nav-item .idbt:hover {
   font-weight: bolder;
   font-family: 'Tinos', serif; }
 body .navbar .nav-item .fa-lightbulb-o {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  color: #EEC213; }
 body header, body aside {
   width: 100%;
   height: 725px;

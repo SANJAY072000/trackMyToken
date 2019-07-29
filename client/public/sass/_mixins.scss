@@ -31,6 +31,10 @@
   font-weight: bolder;
   font-family: 'Tinos', serif;
 }
+@mixin fa-lightbulb-o(){
+  font-size: 1.4em;
+  color:fy(fy1);
+}
 @mixin header(){
   width: 100%;
   height: 725px;

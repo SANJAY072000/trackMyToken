@@ -73,7 +73,7 @@ body{
       @include idbtHover();
     }
   .fa-lightbulb-o{
-    font-size: 1.4em;
+    @include fa-lightbulb-o();
   }
 }
 }
