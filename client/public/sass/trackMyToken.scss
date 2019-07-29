@@ -1,0 +1,197 @@
+// importing the mixins file
+@import "mixins";
+
+
+// defining colors
+$rockingRed:(
+rr1:#E44236,
+rr2:#EA425C,
+rr3:#E8290B
+);
+$beautifulBlue:(
+bb1:#3498DB,
+bb2:#25CCF7,
+bb3:#3C40C6
+);
+$golfGreen:(
+gg1:#45CE30,
+gg2:#019031,
+gg3:#218F76
+);
+$freshYellow:(
+fy1:#EEC213,
+fy2:#F3CC79,
+fy3:#E1DA00
+);
+$oldGrey:(
+og1:#7B8788,
+og2:#47535E,
+og3:#758AA2
+);
+
+
+// defining functions for colors
+@function rr($a){
+  @return map-get($rockingRed,$a);
+}
+@function bb($a){
+  @return map-get($beautifulBlue,$a);
+}
+@function gg($a){
+  @return map-get($golfGreen,$a);
+}
+@function fy($a){
+  @return map-get($freshYellow,$a);
+}
+@function og($a){
+  @return map-get($oldGrey,$a);
+}
+
+
+// media queries
+
+
+// for device of xs width
+body{
+.navbar{
+.navbar-brand{
+.bdic{
+  @include bdic();
+}
+.tken{
+  @include tken();
+}
+.fsty{
+  @include fsty();
+}
+}
+.nav-item{
+.idbt{
+    @include idbt();
+  }
+  .idbt:hover{
+      @include idbtHover();
+    }
+  .fa-lightbulb-o{
+    font-size: 1.4em;
+  }
+}
+}
+header{
+    @include header();
+    .bng1{
+      @include bng1-md();
+    }
+    .bng2{
+      @include bng2-md();
+    }
+    .idbt2{
+      @include idbt2();
+    }
+    .idbt2:hover{
+        @include idbt2Hover();
+      }
+      .idbt3{
+        @include idbt3();
+      }
+      .idbt3:hover{
+        @include idbt3Hover();
+      }
+  }
+}
+
+
+// for device of sm width
+@media (min-width:576px){
+  body{
+
+  }
+}
+
+
+// for device of md width
+@media (min-width:768px){
+  body{
+
+  }
+}
+
+
+// for device of lg width
+@media (min-width:992px){
+  body{
+    .navbar{
+    .navbar-brand{
+    .bdic{
+      @include bdic();
+    }
+    .tken{
+      @include tken();
+    }
+    .fsty{
+      @include fsty();
+    }
+    }
+    .nav-item{
+    .idbt{
+        @include idbt();
+      }
+      .idbt:hover{
+          @include idbtHover();
+        }
+      .fa-lightbulb-o{
+        font-size: 1.4em;
+      }
+    }
+    }
+    header{
+        @include header();
+        .bng1{
+          @include bng1();
+        }
+        .bng2{
+          @include bng2();
+        }
+      }
+  }
+}
+
+
+// for device of xl width
+@media (min-width:1200px){
+  body{
+    .navbar{
+    .navbar-brand{
+    .bdic{
+      @include bdic();
+    }
+    .tken{
+      @include tken();
+    }
+    .fsty{
+      @include fsty();
+    }
+    }
+    .nav-item{
+    .idbt{
+        @include idbt();
+      }
+      .idbt:hover{
+          @include idbtHover();
+        }
+      .fa-lightbulb-o{
+        font-size: 1.4em;
+      }
+    }
+    }
+    header{
+        @include header();
+        .bng1{
+          @include bng1();
+        }
+        .bng2{
+          @include bng2();
+        }
+      }
+  }
+}

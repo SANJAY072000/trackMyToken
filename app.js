@@ -1,0 +1,53 @@
+// importing npm modules
+const express=require('express'),
+passport=require('passport'),
+mongoose=require('mongoose'),
+cors=require('cors'),
+bodyparser=require('body-parser');
+
+
+// starting the server
+const app=express();
+
+
+// fetching the port number
+const port=process.env.PORT||3000;
+
+// fetching the mongourl from configuration file
+const dbstr=require('./setup/config').mongoUrl;
+
+
+// connecting the database
+mongoose.connect(dbstr,{useNewUrlParser:true})
+        .then(()=>console.log('Mongodb connected successfully'))
+        .catch(err=>console.log(err));
+
+
+// fetching the routes
+const auth=require('./routes/api/auth');
+
+
+// configuring middleware for bodyparser
+app.use(bodyparser.urlencoded({extended:true}));
+app.use(bodyparser.json());
+
+
+// configuring middleware for passport
+app.use(passport.initialize());
+
+
+// configuring middleware for cors
+app.use(cors());
+
+
+// listening the server
+app.listen(port,()=>console.log(`Server is running at port ${port}`));
+
+
+
+
+
+
+
+
+

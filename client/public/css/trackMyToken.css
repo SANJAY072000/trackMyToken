@@ -1,0 +1,155 @@
+body .navbar .navbar-brand .bdic {
+  background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+  -webkit-background-clip: text;
+  color: transparent; }
+body .navbar .navbar-brand .tken {
+  font-weight: bolder;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 1.7em;
+  background: linear-gradient(#00F260, #0575E6);
+  -webkit-background-clip: text;
+  color: transparent; }
+body .navbar .navbar-brand .fsty {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  background: linear-gradient(#FF512F, #DD2476);
+  -webkit-background-clip: text;
+  color: transparent; }
+body .navbar .nav-item .idbt {
+  border: 2px solid #568701;
+  padding: 10px 20px;
+  font-weight: bolder;
+  font-family: 'Tinos', serif; }
+body .navbar .nav-item .idbt:hover {
+  background-color: #568701;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Tinos', serif; }
+body .navbar .nav-item .fa-lightbulb-o {
+  font-size: 1.4em; }
+body header {
+  width: 100%;
+  height: 500px;
+  background: url("../images/banner.jpg") no-repeat center center fixed;
+  background-size: cover; }
+  body header .bng1 {
+    font-size: 1.8em;
+    font-family: 'Catamaran', sans-serif; }
+  body header .bng2 {
+    font-size: 2.5em;
+    font-family: 'Tinos', serif;
+    color: #218F76; }
+  body header .idbt2 {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: #c22026;
+    font-weight: bolder;
+    font-family: 'Catamaran', sans-serif; }
+  body header .idbt2:hover {
+    border: 2px solid #c22026;
+    color: #c22026;
+    background-color: #fff;
+    font-weight: bolder;
+    font-family: 'Catamaran', sans-serif; }
+  body header .idbt3 {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: black;
+    font-weight: bolder;
+    font-family: 'Catamaran', sans-serif; }
+  body header .idbt3:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: #fff;
+    font-weight: bolder;
+    font-family: 'Catamaran', sans-serif; }
+
+@media (min-width: 992px) {
+  body .navbar .navbar-brand .bdic {
+    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    color: transparent; }
+  body .navbar .navbar-brand .tken {
+    font-weight: bolder;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.7em;
+    background: linear-gradient(#00F260, #0575E6);
+    -webkit-background-clip: text;
+    color: transparent; }
+  body .navbar .navbar-brand .fsty {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+    background: linear-gradient(#FF512F, #DD2476);
+    -webkit-background-clip: text;
+    color: transparent; }
+  body .navbar .nav-item .idbt {
+    border: 2px solid #568701;
+    padding: 10px 20px;
+    font-weight: bolder;
+    font-family: 'Tinos', serif; }
+  body .navbar .nav-item .idbt:hover {
+    background-color: #568701;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Tinos', serif; }
+  body .navbar .nav-item .fa-lightbulb-o {
+    font-size: 1.4em; }
+  body header {
+    width: 100%;
+    height: 500px;
+    background: url("../images/banner.jpg") no-repeat center center fixed;
+    background-size: cover; }
+    body header .bng1 {
+      font-size: 2.3em;
+      font-family: 'Catamaran', sans-serif; }
+    body header .bng2 {
+      font-size: 3em;
+      font-family: 'Tinos', serif;
+      color: #218F76; } }
+@media (min-width: 1200px) {
+  body .navbar .navbar-brand .bdic {
+    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    color: transparent; }
+  body .navbar .navbar-brand .tken {
+    font-weight: bolder;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.7em;
+    background: linear-gradient(#00F260, #0575E6);
+    -webkit-background-clip: text;
+    color: transparent; }
+  body .navbar .navbar-brand .fsty {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+    background: linear-gradient(#FF512F, #DD2476);
+    -webkit-background-clip: text;
+    color: transparent; }
+  body .navbar .nav-item .idbt {
+    border: 2px solid #568701;
+    padding: 10px 20px;
+    font-weight: bolder;
+    font-family: 'Tinos', serif; }
+  body .navbar .nav-item .idbt:hover {
+    background-color: #568701;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Tinos', serif; }
+  body .navbar .nav-item .fa-lightbulb-o {
+    font-size: 1.4em; }
+  body header {
+    width: 100%;
+    height: 500px;
+    background: url("../images/banner.jpg") no-repeat center center fixed;
+    background-size: cover; }
+    body header .bng1 {
+      font-size: 2.3em;
+      font-family: 'Catamaran', sans-serif; }
+    body header .bng2 {
+      font-size: 3em;
+      font-family: 'Tinos', serif;
+      color: #218F76; } }
+
+/*# sourceMappingURL=trackMyToken.css.map */
