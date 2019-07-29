@@ -15,10 +15,9 @@ export default class Welcome extends Component {
       <Feature/>
       <Ap/>
       <Nf/>
-      <div className="mt-5 text-center font-weight-bolder">
-      copyright {this.props.d.getFullYear()} @
-      <a href="https://sanjay072000.github.io/newFrontEnd/Portfolio" target="_blank" title="Sanjay Here !">
-      Sanjay Here</a>
+      <div className="my-5 text-center font-weight-bolder">
+      copyright@ {this.props.d.getFullYear()}<a href="https://sanjay072000.github.io/newFrontEnd/Portfolio" rel="noopener noreferrer" target="_blank"
+      title="Sanjay Here !"> Sanjay Here !</a>
       </div>
       </div>
     );

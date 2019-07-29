@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default class Ap extends Component {
   render(){
     return(
-      <aside classname="mt-5">
+      <aside className="mt-5">
         <div className="container">
         <div className="row">
         <div className="col-12 mt-0 mt-md-5">
