@@ -8,7 +8,8 @@ const config=require('../setup/config');
 
 
 // fetching the schema
-const Hospital=require('../models/Hospital');
+const Hospital=require('../models/Hospital'),
+Patient=require('../models/Patient');
 
 
 // configuring the strategy
@@ -28,6 +29,14 @@ passport.use(new JwtStrategy(opts,(jwt_payload, done)=>{
                     return done(null, false);
     })
     .catch(err=>console.log(err));
+    Patient.findById(jwt_payload.id)
+           .then((err,patient)=>{
+               if(patient)
+               return done(null,patient);
+               else
+               return done(null,false);
+           })
+           .catch(err=>console.log(err));
 }));
 };
 

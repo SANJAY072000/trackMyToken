@@ -160,10 +160,38 @@ Patient.findOne({pEmail:req.body.pEmail})
 
 /*
 @type - POST
-@route - /api/auth/register/patient
-@desc - a route to register patient
+@route - /api/auth/login/patient
+@desc - a route to login patient
 @access - PUBLIC
 */
+router.post('/login/patient',(req,res)=>{
+const pEmail=req.body.pEmail,pPassword=req.body.pPassword;
+Patient.findOne({pEmail})
+       .then(patient=>{
+           if(!patient)
+           return res.status(200).json({patientNotRegistered:'You are not registered'});
+           bcrypt.compare(pPassword,patient.pPassword)
+                 .then(isCorrect=>{
+                if(isCorrect){
+                const payload={
+                    id:patient._id,
+                    pName:patient.pName,
+                    pEmail:patient.pEmail,
+                    pPassword:patient.pPassword
+                };
+                jsonwt.sign(payload,config.secret,{expiresIn:3600},(err,token)=>{
+                    if(err)throw err;
+                    res.status(200).json({success:true,token:`Bearer ${token}`});
+                });
+                     }
+                     else
+                     return res.status(200).json({passwordIncorrect:'You entered a wrong password'});
+                 })
+                 .catch(err=>console.log(err));
+       })
+       .catch(err=>console.log(err));
+});
+
 
 
 
