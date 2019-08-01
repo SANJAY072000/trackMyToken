@@ -43,15 +43,14 @@ router.post('/register/hospital',(req,res)=>{
                             service: 'gmail',
                             auth: {
                                 user: 'sanjaysinghbisht751@gmail.com',
-                                pass: 'jay07san@'
+                                pass: '2018bci1001'
                             }
                             });
-                            
                             var mailOptions = {};
                             mailOptions.from='sanjaysinghbisht751@gmail.com';
                             mailOptions.to=hospital.hEmail;
                             mailOptions.subject='Thanks for registering your hospital or clinic to TrackMyToken';
-                            mailOptions.text=`Welcome to TrackMyToken ! Your credentials are : email - ${hospital.hEmail} and password - ${req.body.password}`;
+                            mailOptions.text=`Welcome to TrackMyToken ! Your credentials are : email - ${hospital.hEmail} and password - ${req.body.hPassword}`;
                             transporter.sendMail(mailOptions, (error, info)=>{
                             if (error) {
                                 console.log(error);
@@ -80,7 +79,7 @@ router.post('/login/hospital',(req,res)=>{
     Hospital.findOne({hEmail})
             .then(hospital=>{
                 if(!hospital)
-                return res.status.json({hospitalNotRegistered:'Your hospital is not registered'});
+                return res.status(200).json({hospitalNotRegistered:'Your hospital is not registered'});
                 bcrypt.compare(hPassword,hospital.hPassword)
                       .then(isCorrect=>{
                           if(isCorrect){
@@ -133,14 +132,14 @@ Patient.findOne({pEmail:req.body.pEmail})
                     service: 'gmail',
                     auth: {
                         user: 'sanjaysinghbisht751@gmail.com',
-                        pass: 'jay07san@'
+                        pass: '2018bci1001'
                     }
                     });
                     var mailOptions = {};
                     mailOptions.from='sanjaysinghbisht751@gmail.com';
                     mailOptions.to=patient.pEmail;
                     mailOptions.subject=`Thanks ${patient.pName} for creating your account on TrackMyToken`;
-                    mailOptions.text=`Welcome to TrackMyToken ! Your credentials are : email - ${patient.pEmail} and password - ${req.body.password}`;
+                    mailOptions.text=`Welcome to TrackMyToken ! Your credentials are : email - ${patient.pEmail} and password - ${req.body.pPassword}`;
                     transporter.sendMail(mailOptions, (error, info)=>{
                     if (error) {
                         console.log(error);
@@ -173,16 +172,7 @@ Patient.findOne({pEmail})
            bcrypt.compare(pPassword,patient.pPassword)
                  .then(isCorrect=>{
                 if(isCorrect){
-                const payload={
-                    id:patient._id,
-                    pName:patient.pName,
-                    pEmail:patient.pEmail,
-                    pPassword:patient.pPassword
-                };
-                jsonwt.sign(payload,config.secret,{expiresIn:3600},(err,token)=>{
-                    if(err)throw err;
-                    res.status(200).json({success:true,token:`Bearer ${token}`});
-                });
+                    res.status(200).json({loggedInSuccessfully:'You are successfully logged in'});
                      }
                      else
                      return res.status(200).json({passwordIncorrect:'You entered a wrong password'});
@@ -193,7 +183,22 @@ Patient.findOne({pEmail})
 });
 
 
+/*
+@type - GET
+@route - /api/auth/testlogin/hospital
+@desc - a route to test login of the hospital
+@access - PRIVATE
+*/
+router.get('/testlogin/hospital',passport.authenticate('jwt',{session:false}),
+(req,res)=>{
+Hospital.findOne({_id:req.user._id})
+       .then(hospital=>res.status(200).json(hospital))
+       .catch(err=>console.log(err));
+});
 
+
+// exporting the routes
+module.exports=router;
 
 
 
