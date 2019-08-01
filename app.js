@@ -36,8 +36,16 @@ app.use(bodyparser.json());
 app.use(passport.initialize());
 
 
+// fetching the strategy
+require('./strategies/jsonwtStrategy')(passport);
+
+
 // configuring middleware for cors
 app.use(cors());
+
+
+// calling the routes
+app.use('/api/auth',auth);
 
 
 // listening the server
