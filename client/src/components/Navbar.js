@@ -16,7 +16,7 @@ export default class Navbar extends Component {
         <li className="nav-item active">
         <Link to='/'
         className="btn btn-block idbt text-uppercase rounded-0 mb-2 shadow my-4 mt-md-0">
-        <i className="fa fa-lightbulb-o mr-2" aria-hidden="true"></i> Want to suggest an idea ?
+        <i className="fa fa-lightbulb-o mr-2" aria-hidden="true"></i> Want to suggest any idea ?
           </Link>
         </li>
       </ul>

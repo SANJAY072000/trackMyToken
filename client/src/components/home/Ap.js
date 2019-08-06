@@ -22,7 +22,7 @@ export default class Ap extends Component {
         </p>
         </div>
         <div className="col-12 mt-4">
-        <Link to="/" className="btn text-uppercase text-center btn-primary mr-5 px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
+        <Link to="/hospitalLogin" className="btn text-uppercase text-center btn-primary mr-5 px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
         </div>
         </div>
         </div>

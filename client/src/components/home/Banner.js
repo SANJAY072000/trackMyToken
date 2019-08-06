@@ -24,7 +24,7 @@ export default class Banner extends Component {
     <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</Link>
     </div>
     <div className="col-12 mt-4 d-block d-lg-none">
-    <Link to="/" className="btn btn-block idbt2 rounded-0 text-uppercase text-center px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
+    <Link to="/hospitalLogin" className="btn btn-block idbt2 rounded-0 text-uppercase text-center px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
     <Link to="/" className="btn btn-block idbt3 rounded-0 text-uppercase text-center mt-5 px-4 py-2">
     <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</Link>
     </div>
