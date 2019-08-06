@@ -124,6 +124,24 @@ header,aside{
       font-family: 'Open Sans Condensed', sans-serif;
     }
   }
+    .hle{
+      @include hle-xs();
+    }
+    .hlfm{
+      font-family: 'Bree Serif', serif;
+    .form-group{
+    font-size: 1em;
+    input{
+      margin-top: 0px;
+    }
+    }
+    .edibt{
+      @include edibt-xs();
+    }
+    .edibt:hover{
+      @include edibtHover-xs();
+    }
+    }
 }
 
 
@@ -178,6 +196,24 @@ header,aside{
         .bng2{
           @include bng2();
         }
+      }
+      .hle{
+        @include hle();
+      }
+      .hlfm{
+        font-family: 'Bree Serif', serif;
+      .form-group{
+      font-size: 1.3em;
+      input{
+        margin-top: 10px;
+      }
+      }
+      .edibt{
+        @include edibt();
+      }
+      .edibt:hover{
+        @include edibtHover();
+      }
       }
   }
 }

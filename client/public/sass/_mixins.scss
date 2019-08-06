@@ -108,3 +108,39 @@
   no-repeat center center fixed;
   background-size: cover;
 }
+@mixin hle(){
+  color: bb(bb3);
+  font-size: 2em;
+  font-family: 'Tinos', serif;
+}
+@mixin hle-xs(){
+  color: rr(rr1);
+  font-size: 1.5em;
+  font-family: 'Tinos', serif;
+}
+@mixin edibt(){
+  background-color: #fff;
+  color: bb(bb3);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.25em;
+  border: 2px solid bb(bb3);
+}
+@mixin edibtHover(){
+    background-color: bb(bb3);
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.25em;
+}
+@mixin edibt-xs(){
+  background-color: #fff;
+  color: rr(rr1);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  border: 2px solid rr(rr1);
+}
+@mixin edibtHover-xs(){
+    background-color: rr(rr1);
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1em;
+}

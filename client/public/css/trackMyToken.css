@@ -88,6 +88,27 @@ body footer {
   background-color: #3C40C6; }
   body footer h1 {
     font-family: 'Open Sans Condensed', sans-serif; }
+body .hle {
+  color: #E44236;
+  font-size: 1.5em;
+  font-family: 'Tinos', serif; }
+body .hlfm {
+  font-family: 'Bree Serif', serif; }
+  body .hlfm .form-group {
+    font-size: 1em; }
+    body .hlfm .form-group input {
+      margin-top: 0px; }
+  body .hlfm .edibt {
+    background-color: #fff;
+    color: #E44236;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1em;
+    border: 2px solid #E44236; }
+  body .hlfm .edibt:hover {
+    background-color: #E44236;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1em; }
 
 @media (min-width: 992px) {
   body .navbar .navbar-brand .bdic {
@@ -131,7 +152,28 @@ body footer {
     body header .bng2 {
       font-size: 3em;
       font-family: 'Tinos', serif;
-      color: #218F76; } }
+      color: #218F76; }
+  body .hle {
+    color: #3C40C6;
+    font-size: 2em;
+    font-family: 'Tinos', serif; }
+  body .hlfm {
+    font-family: 'Bree Serif', serif; }
+    body .hlfm .form-group {
+      font-size: 1.3em; }
+      body .hlfm .form-group input {
+        margin-top: 10px; }
+    body .hlfm .edibt {
+      background-color: #fff;
+      color: #3C40C6;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.25em;
+      border: 2px solid #3C40C6; }
+    body .hlfm .edibt:hover {
+      background-color: #3C40C6;
+      color: #fff;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.25em; } }
 @media (min-width: 1200px) {
   body .navbar .navbar-brand .bdic {
     background: linear-gradient(#833ab4, #fd1d1d, #fcb045);

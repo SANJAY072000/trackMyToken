@@ -19,7 +19,7 @@ export default class Banner extends Component {
     </p>
     </div>
     <div className="col-12 mt-4 d-none d-lg-block">
-    <Link to="/" className="btn text-uppercase text-center btn-primary mr-5 px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
+    <Link to="/hospitalLogin" className="btn text-uppercase text-center btn-primary mr-5 px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
     <Link to="/" className="btn text-uppercase text-center btn-success px-4 py-2">
     <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</Link>
     </div>
