@@ -124,7 +124,7 @@ header,aside{
       font-family: 'Open Sans Condensed', sans-serif;
     }
   }
-    .hle{
+    .hle,.hre{
       @include hle-xs();
     }
     .hlfm{
@@ -141,7 +141,13 @@ header,aside{
     .edibt:hover{
       @include edibtHover-xs();
     }
-    }
+      .edrgt{
+        @include edrgt-xs();
+      }
+      .edrgt:hover{
+        @include edrgtHover-xs();
+      }
+  }
 }
 
 
@@ -214,6 +220,15 @@ header,aside{
       .edibt:hover{
         @include edibtHover();
       }
+        .edrgt{
+          @include edrgt();
+        }
+        .edrgt:hover{
+          @include edrgtHover();
+        }
+      }
+      .hre{
+        color: #568701;
       }
   }
 }

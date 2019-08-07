@@ -3,6 +3,7 @@ const express=require('express'),
 passport=require('passport'),
 mongoose=require('mongoose'),
 cors=require('cors'),
+path=require('path'),
 bodyparser=require('body-parser');
 
 
@@ -46,6 +47,15 @@ app.use(cors());
 
 // calling the routes
 app.use('/api/auth',auth);
+
+
+// serving the files from the server
+if(process.env.NODE_ENV==='production'){
+app.use(express.static('client/build'));
+app.get('*',(req,res)=>{
+res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+});
+}
 
 
 // listening the server

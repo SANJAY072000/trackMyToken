@@ -88,7 +88,7 @@ body footer {
   background-color: #3C40C6; }
   body footer h1 {
     font-family: 'Open Sans Condensed', sans-serif; }
-body .hle {
+body .hle, body .hre {
   color: #E44236;
   font-size: 1.5em;
   font-family: 'Tinos', serif; }
@@ -105,6 +105,17 @@ body .hlfm {
     font-size: 1em;
     border: 2px solid #E44236; }
   body .hlfm .edibt:hover {
+    background-color: #E44236;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1em; }
+  body .hlfm .edrgt {
+    background-color: #fff;
+    color: #E44236;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1em;
+    border: 2px solid #E44236; }
+  body .hlfm .edrgt:hover {
     background-color: #E44236;
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
@@ -173,7 +184,20 @@ body .hlfm {
       background-color: #3C40C6;
       color: #fff;
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 1.25em; } }
+      font-size: 1.25em; }
+    body .hlfm .edrgt {
+      background-color: #fff;
+      color: #568701;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.25em;
+      border: 2px solid  #568701; }
+    body .hlfm .edrgt:hover {
+      background-color: #568701;
+      color: #fff;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.25em; }
+  body .hre {
+    color: #568701; } }
 @media (min-width: 1200px) {
   body .navbar .navbar-brand .bdic {
     background: linear-gradient(#833ab4, #fd1d1d, #fcb045);

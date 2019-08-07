@@ -103,7 +103,7 @@ export default class HospitalLogin extends Component {
   Login Here <i className="fa fa-sign-in ml-2" aria-hidden="true"></i></button>
 </form>
 <h6 className='text-center text-muted mr-2 my-4'>Not registered yet ?
-<Link to='/'> Register Here !</Link></h6>
+<Link to='/hospitalRegister'> Register Here !</Link></h6>
         </div>
       </div>
     );

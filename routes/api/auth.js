@@ -58,7 +58,7 @@ router.post('/register/hospital',(req,res)=>{
                                 console.log('Email sent: ' + info.response);
                             }
                             });
-                                    return res.status(400).json(hospital);
+                                    return res.status(200).json(hospital);
                                 })
                                    .catch(err=>console.log(err));
                     });
@@ -147,7 +147,7 @@ Patient.findOne({pEmail:req.body.pEmail})
                         console.log('Email sent: ' + info.response);
                     }
                     });
-                            return res.status(400).json(patient);
+                            return res.status(200).json(patient);
                         })
                            .catch(err=>console.log(err));
             });
