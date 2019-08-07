@@ -33,5 +33,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"https://powerful-temple-60433.herokuapp.com/"
+  "proxy":"http://localhost:3000/"
 }
