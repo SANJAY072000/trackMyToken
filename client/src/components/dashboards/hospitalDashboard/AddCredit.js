@@ -11,13 +11,13 @@ export default class AddCredit extends Component {
       <div className='col-md-4 d-block d-md-none'>
       <h6 className='text-center mt-0 mt-md-2 text-uppercase'>
       <span className='mr-3'>Credits</span> :
-      <span className='ml-4 crdes bg-danger px-2 py-1 shadow-lg'>0</span>
+      <span className='ml-4 crdes bg-warning text-dark font-weight-bolder px-2 py-1 shadow-lg'>0</span>
       </h6>
       </div>
       <div className='col-md-4 d-none d-md-block'>
       <h5 className='text-center mt-0 mt-md-2 text-uppercase'>
       <span className='mr-3'>Credits</span> :
-      <span className='ml-4 crdes bg-danger px-2 py-1 shadow-lg'>0</span>
+      <span className='ml-4 crdes bg-warning text-dark font-weight-bolder px-2 py-1 shadow-lg'>0</span>
       </h5>
       </div>
       <div className='col-md-4 text-center my-3 my-md-0'>
