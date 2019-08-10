@@ -118,7 +118,7 @@ header,aside{
   aside{
     @include aside();
   }
-  footer{
+  footer,.adc{
     background-color: bb(bb3);
     h1{
       font-family: 'Open Sans Condensed', sans-serif;
@@ -148,6 +148,18 @@ header,aside{
         @include edrgtHover-xs();
       }
   }
+  .adc{
+    background-color: #1287A5;
+  .adcbt{
+    @include adcbt();
+  }
+  .adcbt:hover{
+    @include adcbtHover();
+  }
+  .crdes{
+    font-family: 'Dancing Script', cursive;
+  }
+}
 }
 
 
@@ -230,6 +242,15 @@ header,aside{
       .hre{
         color: #568701;
       }
+      .adc{
+        background-color: #4834DF;
+      .adcbt{
+        @include adcbt-lg();
+      }
+      .adcbt:hover{
+        @include adcbt-lg-Hover();
+      }
+    }
   }
 }
 
@@ -237,38 +258,5 @@ header,aside{
 // for device of xl width
 @media (min-width:1200px){
   body{
-    .navbar{
-    .navbar-brand{
-    .bdic{
-      @include bdic();
-    }
-    .tken{
-      @include tken();
-    }
-    .fsty{
-      @include fsty();
-    }
-    }
-    .nav-item{
-    .idbt{
-        @include idbt();
-      }
-      .idbt:hover{
-          @include idbtHover();
-        }
-      .fa-lightbulb-o{
-        font-size: 1.4em;
-      }
-    }
-    }
-    header{
-        @include header();
-        .bng1{
-          @include bng1();
-        }
-        .bng2{
-          @include bng2();
-        }
-      }
   }
 }

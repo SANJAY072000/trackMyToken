@@ -170,3 +170,27 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1em;
 }
+@mixin adcbt(){
+    background-color: #fff;
+    color: rr(rr1);
+    font-family: 'Tinos', serif;
+    font-size: 1.25em;
+}
+@mixin adcbtHover(){
+    background-color: rr(rr1);
+    color: #fff;
+    font-family: 'Tinos', serif;
+    font-size: 1.25em;
+}
+@mixin adcbt-lg(){
+    background-color: gg(gg3);
+    color: #fff;
+    font-family: 'Tinos', serif;
+    font-size: 1.25em;
+}
+@mixin adcbt-lg-Hover(){
+  background-color: #fff;
+  color: gg(gg3);
+  font-family: 'Tinos', serif;
+  font-size: 1.25em;
+}

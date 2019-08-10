@@ -84,9 +84,9 @@ body aside {
   height: 700px;
   background: url(../images/welcome.jpg) no-repeat center center fixed;
   background-size: cover; }
-body footer {
+body footer, body .adc {
   background-color: #3C40C6; }
-  body footer h1 {
+  body footer h1, body .adc h1 {
     font-family: 'Open Sans Condensed', sans-serif; }
 body .hle, body .hre {
   color: #E44236;
@@ -120,6 +120,20 @@ body .hlfm {
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1em; }
+body .adc {
+  background-color: #1287A5; }
+  body .adc .adcbt {
+    background-color: #fff;
+    color: #E44236;
+    font-family: 'Tinos', serif;
+    font-size: 1.25em; }
+  body .adc .adcbt:hover {
+    background-color: #E44236;
+    color: #fff;
+    font-family: 'Tinos', serif;
+    font-size: 1.25em; }
+  body .adc .crdes {
+    font-family: 'Dancing Script', cursive; }
 
 @media (min-width: 992px) {
   body .navbar .navbar-brand .bdic {
@@ -197,49 +211,18 @@ body .hlfm {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 1.25em; }
   body .hre {
-    color: #568701; } }
-@media (min-width: 1200px) {
-  body .navbar .navbar-brand .bdic {
-    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
-    -webkit-background-clip: text;
-    color: transparent; }
-  body .navbar .navbar-brand .tken {
-    font-weight: bolder;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 1.7em;
-    background: linear-gradient(#00F260, #0575E6);
-    -webkit-background-clip: text;
-    color: transparent; }
-  body .navbar .navbar-brand .fsty {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.3em;
-    background: linear-gradient(#FF512F, #DD2476);
-    -webkit-background-clip: text;
-    color: transparent; }
-  body .navbar .nav-item .idbt {
-    border: 2px solid #568701;
-    padding: 10px 20px;
-    font-weight: bolder;
-    font-family: 'Tinos', serif; }
-  body .navbar .nav-item .idbt:hover {
-    background-color: #568701;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bolder;
-    font-family: 'Tinos', serif; }
-  body .navbar .nav-item .fa-lightbulb-o {
-    font-size: 1.4em; }
-  body header {
-    width: 100%;
-    height: 725px;
-    background: url("../images/banner.jpg") no-repeat center center fixed;
-    background-size: cover; }
-    body header .bng1 {
-      font-size: 2.3em;
-      font-family: 'Catamaran', sans-serif; }
-    body header .bng2 {
-      font-size: 3em;
+    color: #568701; }
+  body .adc {
+    background-color: #4834DF; }
+    body .adc .adcbt {
+      background-color: #218F76;
+      color: #fff;
       font-family: 'Tinos', serif;
-      color: #218F76; } }
+      font-size: 1.25em; }
+    body .adc .adcbt:hover {
+      background-color: #fff;
+      color: #218F76;
+      font-family: 'Tinos', serif;
+      font-size: 1.25em; } }
 
 /*# sourceMappingURL=trackMyToken.css.map */
