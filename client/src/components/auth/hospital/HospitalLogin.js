@@ -57,7 +57,7 @@ export default class HospitalLogin extends Component {
       hospitalPasswordEmpty:false});
       else {
         localStorage.setItem('hospital',res.data.token);
-        this.props.history.push('/');
+        this.props.history.push('/hospitalDashboard');
       }
     })
     .catch(err=>console.log(err));

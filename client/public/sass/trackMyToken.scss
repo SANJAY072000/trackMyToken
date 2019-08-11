@@ -77,7 +77,7 @@ body{
   }
 }
 }
-header,aside{
+header,aside,.lgerr{
     @include header();
     .bng1{
       @include bng1-md();
