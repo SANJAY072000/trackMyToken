@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 export default class AddCredit extends Component {
   componentDidMount(){
@@ -17,6 +18,10 @@ export default class AddCredit extends Component {
     this.state = {
       credits:0
     };
+    this.onClick=this.onClick.bind(this);
+  }
+  onClick(e){
+    localStorage.removeItem('hospital');
   }
   render(){
     return(
@@ -40,17 +45,12 @@ export default class AddCredit extends Component {
       Add Credits <i className="fa fa-usd ml-1" aria-hidden="true"></i>
       </button>
       </div>
-      <div className='col-md-4 d-block d-md-none'>
-      <h6 className='text-center text-uppercase mt-0 mt-md-2'>
+      <div className='col-md-4 d-flex justify-content-center'>
+      <Link to='/hospitalLogin' onClick={this.onClick}
+      className='btn btn-warning rounded text-center text-uppercase mt-0 ml-md-3 mt-md-1'>
       logout
       <i className="fa fa-sign-out ml-2" aria-hidden="true"></i>
-      </h6>
-      </div>
-      <div className='col-md-4 d-none d-md-block'>
-      <h5 className='text-center text-uppercase mt-0 mt-md-2'>
-      logout
-      <i className="fa fa-sign-out ml-2" aria-hidden="true"></i>
-      </h5>
+      </Link>
       </div>
       </div>
       </div>

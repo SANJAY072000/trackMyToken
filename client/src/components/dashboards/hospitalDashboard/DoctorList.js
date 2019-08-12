@@ -27,8 +27,8 @@ export default class DoctorList extends Component {
           this.state.arr.map((a,i)=>
           <div className='row border pt-4 my-5 shadow rounded' key={i}>
           <div className='col-md-6 text-center'>
-          <img src={a.img} alt='Unavailable' width='200'
-          height='200' className='img-fluid rounded-circle'/>
+          <img src={a.img} alt='Unavailable' width='350'
+          height='350' className='img-fluid rounded-circle'/>
           </div>
           <div className='col-md-6 my-5 lead d-block d-md-none text-center'>
           {`Name : ${a.name}`}
@@ -54,7 +54,7 @@ export default class DoctorList extends Component {
           </div>
           </div>
         )}
-      <div className='mt-5 d-flex justify-content-center mx-auto w-50'>
+      <div className={this.props.credits>0?'mt-5 d-flex justify-content-center mx-auto w-50':'d-none'}>
       <Link to='/addDoctor' className='btn btn-outline-info btn-block text-uppercase'>
       add a doctor <i className="fa fa-user-md" aria-hidden="true"></i>
       </Link>

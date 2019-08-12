@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import * as firebase from 'firebase';
 import HospitalLogin from '../../auth/hospital/HospitalLogin';
+import HospitalDashboard from './HospitalDashboard';
 
 // initializing the firebase app
 var firebaseConfig = {
@@ -18,10 +18,31 @@ firebase.initializeApp(firebaseConfig);
 
 
 export default class AddDoctor extends Component {
+  componentDidMount(){
+    axios({
+      url:'/api/doctor/credits',
+      headers:{
+        'Authorization':localStorage.getItem('hospital')
+      }
+    })
+    .then(res=>this.setState({credits:res.data.credits}))
+    .catch(err=>console.log(err));
+  }
+  constructor(props){
+    super(props);
+    this.state = {
+      credits:0
+    };
+  }
   render(){
     let cmp;
     if(localStorage.getItem('hospital'))
-    cmp=(<Rad/>);
+    {if(this.state.credits>0)
+      cmp=(<Rad/>);
+      else {alert("Sorry you don't have required credits");
+      cmp=(<HospitalDashboard/>);
+    }
+    }
     else cmp=(<HospitalLogin/>);
     return(
       <div>
@@ -60,8 +81,9 @@ class Rad extends Component {
     if(!this.state.name)
     this.setState({nameEmpty:true});
     else{
-      let stref=firebase.storage().ref(`doctors/${this.state.file.name}`);
-      stref.put(this.state.file);
+      let stref=firebase.storage().ref(`doctors/${this.state.file.name}-${Date.now()}`);
+      stref.put(this.state.file)
+           .then(snapshot=>{
       stref.getDownloadURL()
       .then(url=>{
         let doctor={
@@ -77,11 +99,13 @@ class Rad extends Component {
           },
           data:doctor
         })
-        .then(res=>console.log(res.data))
+        .then(res=>console.log("Kick Your Ass"))
         .catch(err=>console.log(err));
       })
       .catch(err=>console.log(err));
-  }
+})
+.catch(err=>console.log(err));
+}
 }
   render(){
     return(
