@@ -160,6 +160,12 @@ header,aside,.lgerr{
     font-family: 'Dancing Script', cursive;
   }
 }
+.estu:hover{
+  @include estu();
+}
+.estu{
+  @include estu();
+}
 }
 
 

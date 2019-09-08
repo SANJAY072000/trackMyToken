@@ -47,7 +47,7 @@ export default class DoctorList extends Component {
           <h6 className='text-uppercase'>token  :
           <span className='ml-2 crdes bg-info text-light p-2'>{a.currentToken}
           </span></h6>
-          <Link to=''>Edit Status</Link>
+        <Link to={`/edit-${a._id}`}>Edit Status</Link>
           <p className=''>Status :
           <span className={a.status==='Active'?'ml-2 crdes bg-success text-light p-2':'ml-2 crdes bg-danger text-light p-2'}>{a.status}
           </span></p>

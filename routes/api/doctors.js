@@ -50,9 +50,18 @@ router.post('/addDoctor',passport.authenticate('jwt',{session:false}),
     if(req.body.name)doctorValues.name=req.body.name;
     if(req.body.img)doctorValues.img=req.body.img;
     if(req.body.domain)doctorValues.domain=req.body.domain;
-    new Doctor(doctorValues).save()
-    .then(doctor=>res.status(200).json(doctor))
-    .catch(err=>console.log(err));
+    Hospital.findOne({_id:req.user._id})
+            .then(hospital=>{
+            hospital.credits--;
+            hospital.save()
+                    .then(hospital=>{
+                    new Doctor(doctorValues).save()
+                    .then(doctor=>res.status(200).json(doctor))
+                    .catch(err=>console.log(err));
+                    })
+                    .catch(err=>console.log(err));
+            })
+            .catch(err=>console.log(err));
 });
 
 
@@ -75,8 +84,18 @@ Doctor.findOne({_id:req.params.dcid})
 });
 
 
+/*
+@type - DELETE
+@route - /api/doctor/delStatus-:dcid
+@desc - a route to delete doctor from the hospital
+@access - PRIVATE
+*/
+router.delete('/delStatus-:dcid',passport.authenticate('jwt',{session:false}),(req,res)=>{
+    Doctor.findOneAndRemove({_id:req.params.dcid})
+          .then(()=>res.status(200).json({doctorDeleted:'Doctor deleted successfully'}))
+          .catch(err=>console.log(err));
 
-
+});
 
 
 

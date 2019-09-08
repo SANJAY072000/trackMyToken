@@ -134,6 +134,16 @@ body .adc {
     font-size: 1.25em; }
   body .adc .crdes {
     font-family: 'Dancing Script', cursive; }
+body .estu:hover {
+  background-color: #009688;
+  color: #fff;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 1.25em; }
+body .estu {
+  background-color: #009688;
+  color: #fff;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 1.25em; }
 
 @media (min-width: 992px) {
   body .navbar .navbar-brand .bdic {

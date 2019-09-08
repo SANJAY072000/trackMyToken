@@ -7,6 +7,7 @@ import HospitalLogin from './components/auth/hospital/HospitalLogin';
 import HospitalRegister from './components/auth/hospital/HospitalRegister';
 import HospitalDashboard from './components/dashboards/hospitalDashboard/HospitalDashboard';
 import AddDoctor from './components/dashboards/hospitalDashboard/AddDoctor';
+import EditStatus from './components/dashboards/hospitalDashboard/EditStatus';
 
 export default class App extends Component {
   render(){
@@ -20,6 +21,7 @@ export default class App extends Component {
       <Route path='/hospitalRegister' component={HospitalRegister}/>
       <Route path='/hospitalDashboard' component={HospitalDashboard}/>
       <Route path='/addDoctor' component={AddDoctor}/>
+      <Route path='/edit-:dcid' component={EditStatus}/>
       </div>
       </Router>
     );

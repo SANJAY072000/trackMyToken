@@ -38,10 +38,9 @@ export default class AddDoctor extends Component {
     let cmp;
     if(localStorage.getItem('hospital'))
     {if(this.state.credits>0)
-      cmp=(<Rad/>);
-      else {alert("Sorry you don't have required credits");
+      cmp=(<Rad mh={this.props.history}/>);
+      else
       cmp=(<HospitalDashboard/>);
-    }
     }
     else cmp=(<HospitalLogin/>);
     return(
@@ -74,7 +73,9 @@ class Rad extends Component {
     this.setState({file:e.target.files[0]});
   }
   onChange(e){
-    this.setState({[e.target.name]:e.target.value});
+    if(e.target.name==='name')
+    this.setState({[e.target.name]:e.target.value.toUpperCase()});
+    else this.setState({[e.target.name]:e.target.value});
   }
   onSubmit(e){
     e.preventDefault();
@@ -99,7 +100,7 @@ class Rad extends Component {
           },
           data:doctor
         })
-        .then(res=>console.log("Kick Your Ass"))
+        .then(res=>this.props.mh.push('/hospitalDashboard'))
         .catch(err=>console.log(err));
       })
       .catch(err=>console.log(err));
