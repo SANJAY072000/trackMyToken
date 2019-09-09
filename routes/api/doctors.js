@@ -1,7 +1,9 @@
 // importing the required modules
 const express=require('express'),
 router=express.Router(),
-passport=require('passport');
+passport=require('passport'),
+nodemailer=require('nodemailer'),
+stripe=require('stripe')('sk_test_rJu0jnztELKmKe5Hcz8cE1R700ghIMSM3h');
 
 
 // fetching the schemas
@@ -97,6 +99,61 @@ router.delete('/delStatus-:dcid',passport.authenticate('jwt',{session:false}),(r
 
 });
 
+
+/*
+@type - POST
+@route - /api/doctor/checkout
+@desc - a route to process payment for credits' request
+@access - PRIVATE
+*/
+router.post('/checkout',passport.authenticate('jwt',{session:false}),
+(req,res)=>{
+stripe.customers.create({
+    source:req.body.stripeToken.id,
+    email:req.body.stripeToken.email
+})
+      .then(customer=>{
+          stripe.charges.create({
+              currency:'usd',
+              customer:customer.id,
+              description:'Add Credits To Dashboard',
+              amount:1000
+          })
+    .then(charge=>{
+        Hospital.findOne({_id:req.user._id})
+        .then(hospital=>{
+        hospital.credits+=10;
+        hospital.save()
+        .then(hospital=>{
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'sanjaysinghbisht751@gmail.com',
+                pass: '2018bci1001'
+            }
+            });
+            var mailOptions = {};
+            mailOptions.from='sanjaysinghbisht751@gmail.com';
+            mailOptions.to=req.body.stripeToken.email;
+            mailOptions.subject='Your Payment was successful to trackMyToken';
+            mailOptions.text=`Successful payment of 10$ was made to trackMyToken and 10 credits have been added to your account.`;
+            transporter.sendMail(mailOptions, (error, info)=>{
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+            });
+    return res.status(200).json({paymentSuccess:'Payment was successful'});
+    })
+        .catch(err=>console.log(err));
+                })
+                .catch(err=>console.log(err));
+    })
+    .catch(err=>console.log(err));
+      })
+      .catch(err=>console.log(err));
+});
 
 
 
