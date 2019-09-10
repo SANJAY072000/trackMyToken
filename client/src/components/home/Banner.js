@@ -1,7 +1,31 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import Auth0Lock from 'auth0-lock';
+
+const clientId='6DnT6qkBCt4H8VtyNuV6hPX8bnpBY6pY',
+domain='dev-uf0zjuv7.auth0.com';
+
 
 export default class Banner extends Component {
+  componentWillMount(){
+    this.lock=new Auth0Lock(clientId,domain);
+    this.lock.on('authenticated',res=>{
+    this.lock.getUserInfo(res.accessToken,(err,profile)=>{
+    localStorage.setItem('patient',res.accessToken);
+    this.props.mh.push('/patientDashboard');
+    });
+    });
+  }
+  constructor(props){
+    super(props);
+    this.state = {
+      accessToken:''
+    };
+    this.showLock=this.showLock.bind(this);
+  }
+  showLock(){
+    this.lock.show();
+  }
   render(){
     return(
     <header>
@@ -20,13 +44,14 @@ export default class Banner extends Component {
     </div>
     <div className="col-12 mt-4 d-none d-lg-block">
     <Link to="/hospitalLogin" className="btn text-uppercase text-center btn-primary mr-5 px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
-    <Link to="/" className="btn text-uppercase text-center btn-success px-4 py-2">
-    <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</Link>
+    <button className="btn text-uppercase text-center btn-success px-4 py-2"
+    onClick={this.showLock}>
+    <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</button>
     </div>
     <div className="col-12 mt-4 d-block d-lg-none">
     <Link to="/hospitalLogin" className="btn btn-block idbt2 rounded-0 text-uppercase text-center px-4 py-2"><i className="fa fa-user-md mr-2" aria-hidden="true"></i>Add a doctor</Link>
-    <Link to="/" className="btn btn-block idbt3 rounded-0 text-uppercase text-center mt-5 px-4 py-2">
-    <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</Link>
+    <button onClick={this.showLock} className="btn btn-block idbt3 rounded-0 text-uppercase text-center mt-5 px-4 py-2">
+    <i className="fa fa-meetup mr-2" aria-hidden="true"></i>Place an appointment</button>
     </div>
     <div className="col-12"></div>
     </div>

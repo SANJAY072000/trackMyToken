@@ -4,6 +4,7 @@ import Feature from './Feature';
 import Ap from './Ap';
 import Nf from './Nf';
 import HospitalDashboard from '../dashboards/hospitalDashboard/HospitalDashboard';
+import PatientDashboard from '../dashboards/patientDashboard/PatientDashboard';
 
 export default class Welcome extends Component {
   static defaultProps={
@@ -11,10 +12,13 @@ export default class Welcome extends Component {
   };
   render(){
     let cm;
+    if(localStorage.getItem('hospital')||localStorage.getItem('patient')){
     if(localStorage.getItem('hospital'))
     cm=(<HospitalDashboard/>);
+    else if(localStorage.getItem('patient'))
+    cm=(<PatientDashboard/>);}
     else cm=(<div>
-    <Banner/>
+    <Banner mh={this.props.history}/>
     <Feature/>
     <Ap/>
     <Nf/>

@@ -3,6 +3,7 @@ import AddCredit from './AddCredit';
 import DoctorList from './DoctorList';
 import HospitalLogin from '../../auth/hospital/HospitalLogin';
 import axios from 'axios';
+import PatientDashboard from '../patientDashboard/PatientDashboard';
 
 export default class HospitalDashboard extends Component {
   componentDidMount(){
@@ -26,6 +27,8 @@ export default class HospitalDashboard extends Component {
     if(localStorage.getItem('hospital'))
     cmp=(<div><AddCredit/>
     <DoctorList credits={this.state.credits}/></div>);
+    else if(localStorage.getItem('patient'))
+    cmp=(<PatientDashboard/>);
     else cmp=(<HospitalLogin/>);
     return(
       <div>

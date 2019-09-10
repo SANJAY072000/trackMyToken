@@ -166,8 +166,19 @@ header,aside,.lgerr{
 .estu{
   @include estu();
 }
+.tlef{
+@include tlef();
+.bhabi{
+@include bhabhi();
 }
-
+.ban{
+  font-family: 'Dancing Script', cursive;
+}
+.tap{
+  font-family: 'Tinos', serif;
+}
+}
+}
 
 // for device of sm width
 @media (min-width:576px){

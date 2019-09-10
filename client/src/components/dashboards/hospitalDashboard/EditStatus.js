@@ -1,12 +1,15 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import HospitalLogin from '../../auth/hospital/HospitalLogin';
+import PatientDashboard from '../patientDashboard/PatientDashboard';
 
 export default class EditStatus extends Component {
   render(){
     let cmp;
     if(localStorage.getItem('hospital'))
     cmp=(<Esd id={this.props.match.params.dcid} mh={this.props.history}/>);
+    else if(localStorage.getItem('patient'))
+    cmp=(<PatientDashboard/>);
     else cmp=(<HospitalLogin/>);
     return(
       <div>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import * as firebase from 'firebase';
 import HospitalLogin from '../../auth/hospital/HospitalLogin';
 import HospitalDashboard from './HospitalDashboard';
+import PatientDashboard from '../patientDashboard/PatientDashboard';
 
 // initializing the firebase app
 var firebaseConfig = {
@@ -42,6 +43,8 @@ export default class AddDoctor extends Component {
       else
       cmp=(<HospitalDashboard/>);
     }
+    else if(localStorage.getItem('patient'))
+    cmp=(<PatientDashboard/>);
     else cmp=(<HospitalLogin/>);
     return(
       <div>
