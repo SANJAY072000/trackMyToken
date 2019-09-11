@@ -101,6 +101,19 @@ router.delete('/delStatus-:dcid',passport.authenticate('jwt',{session:false}),(r
 
 
 /*
+@type - GET
+@route - /api/doctor/search-:schid
+@desc - a route to get the doctor's current status
+@access - PUBLIC
+*/
+router.get('/search-:schid',(req,res)=>{
+Doctor.find({_id:req.params.schid})
+      .then(doctor=>res.status(200).json({doctor}))
+      .catch(err=>console.log(err));
+});
+
+
+/*
 @type - POST
 @route - /api/doctor/checkout
 @desc - a route to process payment for credits' request

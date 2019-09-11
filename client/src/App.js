@@ -9,6 +9,9 @@ import HospitalDashboard from './components/dashboards/hospitalDashboard/Hospita
 import AddDoctor from './components/dashboards/hospitalDashboard/AddDoctor';
 import EditStatus from './components/dashboards/hospitalDashboard/EditStatus';
 import PatientDashboard from './components/dashboards/patientDashboard/PatientDashboard';
+import Appointment from './components/dashboards/patientDashboard/Appointment';
+import TrackDoctor from './components/dashboards/TrackDoctor';
+import Suggestion from './components/Suggestion';
 
 export default class App extends Component {
   render(){
@@ -24,6 +27,9 @@ export default class App extends Component {
       <Route path='/addDoctor' component={AddDoctor}/>
       <Route path='/edit-:dcid' component={EditStatus}/>
       <Route path='/patientDashboard' component={PatientDashboard}/>
+      <Route path='/appointments' component={Appointment}/>
+      <Route path='/search-:id' component={TrackDoctor}/>
+      <Route path='/suggestion' component={Suggestion}/>
       </div>
       </Router>
     );

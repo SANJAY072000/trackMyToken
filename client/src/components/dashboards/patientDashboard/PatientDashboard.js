@@ -30,6 +30,10 @@ class Pat extends Component {
   constructor(props){
     super(props);
     this.state = {name:'',pic:''};
+    this.onClick=this.onClick.bind(this);
+  }
+  onClick(){
+    localStorage.removeItem('patient');
   }
   render(){
     return(
@@ -46,12 +50,15 @@ class Pat extends Component {
         <div className='col-md-6 text-center mb-5'>
           <div className="card d-block mx-auto" style={{"maxWidth":"18rem"}}>
 <div className="card-header">
-<Link to='/abc'><i className="fa fa-list-alt mt-3 bhabi animated bounce" aria-hidden="true"></i></Link>
+<Link to='/appointments'><i className="fa fa-list-alt mt-3 bhabi animated bounce" aria-hidden="true"></i></Link>
     </div>
     <div className="card-body p-4">
       <h5 className="card-title ban font-weight-bolder text-uppercase my-3">Book an appointment</h5>
       <p className="card-text tap my-3">In order to book an appointment tap the above icon.
       </p>
+      <Link to='/' onClick={this.onClick}
+      className='btn text-uppercase btn-block btn-outline-danger'>
+      LogOut <i className="fa fa-sign-out ml-2" aria-hidden="true"></i></Link>
     </div>
   </div>
         </div>

@@ -14,7 +14,7 @@ export default class Navbar extends Component {
       <span className="font-weight-bold fsty">TrackMy</span><span className="tken text-center">Token</span></Link>
       <ul className="navbar-nav mx-auto">
         <li className="nav-item active">
-        <Link to='/'
+        <Link to='/suggestion'
         className="btn btn-block idbt text-uppercase rounded-0 mb-2 shadow my-4 mt-md-0">
         <i className="fa fa-lightbulb-o mr-2" aria-hidden="true"></i> Want to suggest any idea ?
           </Link>

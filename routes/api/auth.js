@@ -9,7 +9,8 @@ nodemailer=require('nodemailer');
 
 // fetching the schemas
 const Hospital=require('../../models/Hospital'),
-Patient=require('../../models/Patient');
+Patient=require('../../models/Patient'),
+Doctor=require('../../models/Doctor');
 
 
 // fetching the setup file
@@ -195,6 +196,29 @@ Hospital.findOne({_id:req.user._id})
        .then(hospital=>res.status(200).json(hospital))
        .catch(err=>console.log(err));
 });
+
+
+/*
+@type - DELETE
+@route - /api/auth/delete
+@desc - a route to delete hospital account
+@access - PRIVATE
+*/
+router.delete('/delete',passport.authenticate('jwt',{session:false}),(req,res)=>{
+Doctor.find({user:req.user._id})
+      .then(doctor=>{
+      doctor.forEach(a=>{
+      Doctor.findOneAndRemove({_id:a._id})
+      .then(()=>console.log('Removed Successfully'))
+      .catch(err=>console.log(err));
+      Hospital.findOneAndRemove({_id:req.user._id})
+      .then(()=>res.status(200).json({Deleted:'Removed Successfully'}))
+      .catch(err=>console.log(err));
+      });
+      })
+      .catch(err=>console.log(err));
+});
+
 
 
 // exporting the routes

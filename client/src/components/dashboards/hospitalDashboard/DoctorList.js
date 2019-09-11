@@ -18,6 +18,18 @@ export default class DoctorList extends Component {
     this.state = {
       arr:[]
     };
+    this.onClick=this.onClick.bind(this);
+  }
+  onClick(){
+    axios({
+      url:'/api/auth/delete',
+      method:'delete',
+      headers:{
+        Authorization:localStorage.getItem('hospital')
+      }
+    })
+    .then(res=>{console.log(res.data.Deleted);localStorage.removeItem('hospital')})
+    .catch(err=>console.log(err));
   }
   render(){
     return(
@@ -60,7 +72,7 @@ export default class DoctorList extends Component {
       </Link>
       </div>
       <div className='my-4 d-flex justify-content-center mx-auto w-50'>
-      <Link to='' className='btn btn-outline-danger btn-block text-uppercase'>
+      <Link to='/hospitalLogin' onClick={this.onClick} className='btn btn-outline-danger btn-block text-uppercase'>
       Delete the account <i className="fa fa-times" aria-hidden="true"></i>
       </Link>
       </div>

@@ -26,7 +26,8 @@ mongoose.connect(dbstr,{useNewUrlParser:true})
 
 // fetching the routes
 const auth=require('./routes/api/auth'),
-doctor=require('./routes/api/doctors');
+doctor=require('./routes/api/doctors'),
+appointment=require('./routes/api/appointments');
 
 
 // configuring middleware for bodyparser
@@ -49,6 +50,7 @@ app.use(cors());
 // calling the routes
 app.use('/api/auth',auth);
 app.use('/api/doctor',doctor);
+app.use('/api/appointment',appointment);
 
 
 // serving the files from the server
