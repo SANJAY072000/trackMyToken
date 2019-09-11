@@ -75,8 +75,8 @@ class Esd extends Component {
       <div className="jumbotron shadow border rounded d-none d-md-block">
       <div className="container text-center">
       <p className="lead mb-5">The following URL can be used by the patients to track the status of their token : </p>
-      <a href={`https://bristalava.herokuapp.com/search/${this.props.id}`} target='_blank' rel="noopener noreferrer">
-        {`https://bristalava.herokuapp.com/search/${this.props.id}`}</a>
+      <a href={`https://bristalava.herokuapp.com/search-${this.props.id}`} target='_blank' rel="noopener noreferrer">
+        {`https://bristalava.herokuapp.com/search-${this.props.id}`}</a>
       </div>
       </div>
       <form className='shadow px-5 py-1 my-5 hlfm border-bottom rounded'
