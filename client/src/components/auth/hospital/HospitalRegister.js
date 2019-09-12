@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import PatientDashboard from '../../dashboards/patientDashboard/PatientDashboard';
 
 
-const APIkey="9e984b3cf7mshc35d121a0419715p1bf4d1jsn50d7d624ce5f";
+
 
 export default class HospitalRegister extends Component {
   componentDidMount(){
@@ -57,9 +57,9 @@ export default class HospitalRegister extends Component {
       if(!this.state.cp)this.setState({cpEmpty:true});
     else{
       axios({
-        url:`https://pozzad-email-validator.p.rapidapi.com/emailvalidator/validateEmail/${this.state.email}`,
+        url:`${this.state.email}`,
         headers:{
-          "x-rapidapi-host": "pozzad-email-validator.p.rapidapi.com",
+          "x-rapidapi-host": "",
           "x-rapidapi-key": `${APIkey}`
         }
       })
