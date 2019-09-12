@@ -7,13 +7,6 @@ import PatientDashboard from '../patientDashboard/PatientDashboard';
 
 // initializing the firebase app
 var firebaseConfig = {
-   apiKey: "AIzaSyD3Iwk34YMrbEW34J9B62dUneFEm4LYokw",
-   authDomain: "trackmytoken.firebaseapp.com",
-   databaseURL: "https://trackmytoken.firebaseio.com",
-   projectId: "trackmytoken",
-   storageBucket: "trackmytoken.appspot.com",
-   messagingSenderId: "191737057361",
-   appId: "1:191737057361:web:1cc427652c268fa3"
  };
 firebase.initializeApp(firebaseConfig);
 
