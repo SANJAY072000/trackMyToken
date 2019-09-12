@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 
-const key='8efb4d00ecb5445d9c27a0addb9bd51e';
+
 export default class News extends Component {
   componentDidMount(){
     axios({
-      url:`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${key}`,
+      url:`apiKey=${key}`,
     })
     .then(res=>{
       this.setState({articles:res.data.articles})
