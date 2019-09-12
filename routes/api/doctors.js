@@ -3,7 +3,7 @@ const express=require('express'),
 router=express.Router(),
 passport=require('passport'),
 nodemailer=require('nodemailer'),
-stripe=require('stripe')('sk_test_rJu0jnztELKmKe5Hcz8cE1R700ghIMSM3h');
+stripe=require('stripe')();
 
 
 // fetching the schemas
@@ -141,8 +141,6 @@ stripe.customers.create({
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'sanjaysinghbisht751@gmail.com',
-                pass: '@Mgo31pal'
             }
             });
             var mailOptions = {};
