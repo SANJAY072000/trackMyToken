@@ -2,8 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import Auth0Lock from 'auth0-lock';
 
-const clientId='6DnT6qkBCt4H8VtyNuV6hPX8bnpBY6pY',
-domain='dev-uf0zjuv7.auth0.com';
+
 
 
 export default class Banner extends Component {
