@@ -75,8 +75,6 @@ Doctor.findOne({_id:req.params.dcid})
                     var transporter = nodemailer.createTransport({
                         service: 'gmail',
                         auth: {
-                            user: 'sanjaysinghbisht751@gmail.com',
-                            pass: '@Mgo31pal'
                         }
                         });
                         var mailOptions = {};
@@ -114,8 +112,6 @@ router.post('/send',(req,res)=>{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'sanjaysinghbisht751@gmail.com',
-            pass: '@Mgo31pal'
         }
         });
         var mailOptions = {};
