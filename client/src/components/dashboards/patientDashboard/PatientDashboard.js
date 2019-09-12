@@ -2,8 +2,6 @@ import React,{Component} from 'react';
 import Auth0Lock from 'auth0-lock';
 import {Link} from 'react-router-dom';
 
-const clientId='6DnT6qkBCt4H8VtyNuV6hPX8bnpBY6pY',
-domain='dev-uf0zjuv7.auth0.com';
 
 export default class PatientDashboard extends Component {
   render(){
