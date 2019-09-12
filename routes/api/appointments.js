@@ -85,7 +85,7 @@ Doctor.findOne({_id:req.params.dcid})
                         mailOptions.subject=`Appointment with Dr. ${doctor.name} in ${hospital.hName}`;
                         mailOptions.text=`Your token for appointment is ${doctor.totalToken}.
                         You can track your token status at 
-                        http://localhost:3001/search-${doctor._id}`;
+                        https://bristalava.herokuapp.com/search-${doctor._id}`;
                         transporter.sendMail(mailOptions, (error, info)=>{
                         if (error) {
                             console.log(error);
