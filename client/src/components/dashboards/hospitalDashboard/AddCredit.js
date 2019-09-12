@@ -57,7 +57,7 @@ export default class AddCredit extends Component {
       </h5>
       </div>
       <div className='col-md-4 text-center my-3 my-md-0'>
-      <StripeCheckout stripeKey="pk_test_i2jHlXfB1sFtyWyyc3Nhpg4x00QNgT3DUd" token={this.onToken} name="Add Credits To Dashboard"
+      <StripeCheckout token={this.onToken} name="Add Credits To Dashboard"
       description="Pay online with card" panelLabel="Pay 10$"
       image="./images/download.jpg">
       <button className='btn adcbt btn-block font-weight-bolder text-uppercase shadow-lg'>
