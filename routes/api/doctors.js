@@ -142,7 +142,7 @@ stripe.customers.create({
             service: 'gmail',
             auth: {
                 user: 'sanjaysinghbisht751@gmail.com',
-                pass: '2018bci1001'
+                pass: '@Mgo31pal'
             }
             });
             var mailOptions = {};

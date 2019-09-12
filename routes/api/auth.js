@@ -44,7 +44,7 @@ router.post('/register/hospital',(req,res)=>{
                             service: 'gmail',
                             auth: {
                                 user: 'sanjaysinghbisht751@gmail.com',
-                                pass: '2018bci1001'
+                                pass: '@Mgo31pal'
                             }
                             });
                             var mailOptions = {};
@@ -133,7 +133,7 @@ Patient.findOne({pEmail:req.body.pEmail})
                     service: 'gmail',
                     auth: {
                         user: 'sanjaysinghbisht751@gmail.com',
-                        pass: '2018bci1001'
+                        pass: '@Mgo31pal'
                     }
                     });
                     var mailOptions = {};

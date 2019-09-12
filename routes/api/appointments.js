@@ -76,7 +76,7 @@ Doctor.findOne({_id:req.params.dcid})
                         service: 'gmail',
                         auth: {
                             user: 'sanjaysinghbisht751@gmail.com',
-                            pass: '2018bci1001'
+                            pass: '@Mgo31pal'
                         }
                         });
                         var mailOptions = {};
@@ -115,7 +115,7 @@ router.post('/send',(req,res)=>{
         service: 'gmail',
         auth: {
             user: 'sanjaysinghbisht751@gmail.com',
-            pass: '2018bci1001'
+            pass: '@Mgo31pal'
         }
         });
         var mailOptions = {};
